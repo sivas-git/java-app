@@ -48,7 +48,7 @@ pipeline {
                 sh """
                 docker stop java-app || true
                 docker rm java-app || true
-                docker run -it --name java-app -p 8000:8000 $DOCKER_IMAGE
+                docker run -d --name java-app -p 8000:8000 $DOCKER_IMAGE
                 """
             }
         }
